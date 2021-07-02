@@ -1,2 +1,2 @@
-# ligen-template
-Project template for Ligen's generators.
+# {{project-name}}
+Language interface generator

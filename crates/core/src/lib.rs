@@ -1,17 +1,19 @@
-//! Generator definition.
+use ligen::prelude::*;
+use ligen::ir::Attributes;
+use ligen::generator::{Context, FileSet, FileGenerator, FFIGenerator, ImplementationVisitor};
 
-#[derive(Clone, Copy, Debug, Default)]
+/// Generator.
+#[derive(Debug, Clone)]
 pub struct Generator;
 
-impl ligen::generator::Generator for Generator {
+impl ligen::Generator for Generator {
     fn new(_context: &Context, _attributes: &Attributes) -> Self {
-        Default::default()
+        Self
     }
 }
 
-impl ligen::generator::FileGenerator for Generator {
+impl FileGenerator for Generator {
     fn generate_files(&self, _context: &Context, _file_set: &mut FileSet, _implementation: Option<&ImplementationVisitor>) {
-
     }
 }
 
